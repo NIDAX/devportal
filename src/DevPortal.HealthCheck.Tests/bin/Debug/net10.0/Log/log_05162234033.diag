@@ -1,0 +1,16 @@
+2026-05-16T22:12:34.0363840+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Version: 1.4.3+c252b64ad913ea9411fc5d17bfd5580d2d061497
+2026-05-16T22:12:34.0416040+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging mode: asynchronous
+2026-05-16T22:12:34.0419430+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Logging level: Information
+2026-05-16T22:12:34.0419440+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION CreateBuilderAsync entry time: 22:12:34.029
+2026-05-16T22:12:34.0423500+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION PID: 76777
+2026-05-16T22:12:34.0423640+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime information: osx-arm64 - .NET 10.0.8
+2026-05-16T22:12:34.0423700+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Runtime location: /usr/local/share/dotnet/shared/Microsoft.NETCore.App/10.0.8/System.Private.CoreLib.dll
+2026-05-16T22:12:34.0423740+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION IsDynamicCodeSupported: True
+2026-05-16T22:12:34.0423750+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Test module: /Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck.Tests/bin/Debug/net10.0/DevPortal.HealthCheck.Tests.dll
+2026-05-16T22:12:34.0424130+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION Command line arguments: '--server --diagnostic --diagnostic-verbosity Information --diagnostic-output-directory /Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck.Tests/bin/Debug/net10.0/Log --client-port 54068'
+2026-05-16T22:12:34.0466580+00:00 Microsoft.Testing.Platform.Builder.TestApplication INFORMATION TESTINGPLATFORM_DEFAULT_HANG_TIMEOUT: ''
+2026-05-16T22:12:34.0512860+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting RegisterEnvironmentVariablesConfigurationSource: 'True'
+2026-05-16T22:12:34.0526830+00:00 Microsoft.Testing.Platform.Configurations.JsonConfigurationSource+JsonConfigurationProvider INFORMATION Config file '/Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck.Tests/bin/Debug/net10.0/DevPortal.HealthCheck.Tests.testconfig.json' not found.
+2026-05-16T22:12:34.0532300+00:00 Microsoft.Testing.Platform.Hosts.TestHostBuilder INFORMATION Setting PlatformExitProcessOnUnhandledException: 'False', config file: False environment variable:  VSTest mode: False
+2026-05-16T22:12:34.1102940+00:00 Microsoft.Testing.Platform.Requests.TestHostTestFrameworkInvoker INFORMATION Test framework UID: '30ea7c6e-dd24-4152-a360-1387158cd41d' Version: '1.0.0' DisplayName: 'xUnit.net v3 Microsoft.Testing.Platform test framework' Description: 'xUnit.net v3 Microsoft.Testing.Platform test framework'
+2026-05-16T22:12:34.1123500+00:00 xUnit.net INFORMATION xUnit.net v3 In-Process Runner v1.0.0+5b41c61aa1 (64-bit .NET 10.0.8)

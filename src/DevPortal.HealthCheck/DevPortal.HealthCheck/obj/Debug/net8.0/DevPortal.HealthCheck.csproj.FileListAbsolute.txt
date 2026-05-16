@@ -1,0 +1,12 @@
+/Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck/DevPortal.HealthCheck/bin/Debug/net8.0/DevPortal.HealthCheck.deps.json
+/Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck/DevPortal.HealthCheck/bin/Debug/net8.0/DevPortal.HealthCheck.dll
+/Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck/DevPortal.HealthCheck/bin/Debug/net8.0/DevPortal.HealthCheck.pdb
+/Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck/DevPortal.HealthCheck/obj/Debug/net8.0/DevPortal.HealthCheck.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck/DevPortal.HealthCheck/obj/Debug/net8.0/DevPortal.HealthCheck.AssemblyInfoInputs.cache
+/Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck/DevPortal.HealthCheck/obj/Debug/net8.0/DevPortal.HealthCheck.AssemblyInfo.cs
+/Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck/DevPortal.HealthCheck/obj/Debug/net8.0/DevPortal.HealthCheck.csproj.CoreCompileInputs.cache
+/Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck/DevPortal.HealthCheck/obj/Debug/net8.0/DevPortal.HealthCheck.sourcelink.json
+/Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck/DevPortal.HealthCheck/obj/Debug/net8.0/DevPortal.HealthCheck.dll
+/Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck/DevPortal.HealthCheck/obj/Debug/net8.0/refint/DevPortal.HealthCheck.dll
+/Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck/DevPortal.HealthCheck/obj/Debug/net8.0/DevPortal.HealthCheck.pdb
+/Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck/DevPortal.HealthCheck/obj/Debug/net8.0/ref/DevPortal.HealthCheck.dll
