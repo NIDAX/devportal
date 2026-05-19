@@ -1,0 +1,86 @@
+name: devportal CI/CD
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+env:
+  IMAGE_NAME: nidarow/devportal-app
+  IMAGE_TAG: ${{ github.sha }}
+
+jobs:
+  build-test-scan-push:
+    name: Build, Test, Scan and Push
+    runs-on: ubuntu-latest
+
+    steps:
+      # Step 1 — Checkout
+      # Downloads the latest code onto the GitHub runner
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Step 2 — Setup .NET
+      # Installs .NET 8 on the runner so we can build and test
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      # Step 3 — Restore dependencies
+      # Downloads all NuGet packages the project needs
+      - name: Restore dependencies
+        run: dotnet restore ./src/DevPortal.App/DevPortal.App.csproj
+
+      # Step 4 — Build
+      # Compiles the .NET code — fails here if there are any errors
+      - name: Build
+        run: dotnet build ./src/DevPortal.App/DevPortal.App.csproj \
+          --no-restore \
+          -c Release
+
+      # Step 5 — Test
+      # Runs all 4 automated tests — pipeline stops if any fail
+      # This is the guardrail — nothing deploys with broken code
+      - name: Test
+        run: dotnet test ./src/DevPortal.HealthCheck.Tests/DevPortal.HealthCheck.Tests.csproj \
+          --no-restore \
+          -c Release
+
+      # Step 6 — Login to Docker Hub
+      # Uses secrets stored in GitHub — never hardcoded
+      - name: Login to Docker Hub
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+
+      # Step 7 — Build Docker image
+      # Builds the multi-stage Dockerfile we wrote
+      - name: Build Docker image
+        run: |
+          docker build \
+            -f src/DevPortal.App/Dockerfile \
+            -t ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} \
+            -t ${{ env.IMAGE_NAME }}:latest \
+            .
+
+      # Step 8 — Security scan with Trivy
+      # Scans the built image for known vulnerabilities
+      # Pipeline stops if any CRITICAL vulnerabilities are found
+      # This is the security guardrail — no exceptions
+      - name: Security scan with Trivy
+        uses: aquasecurity/trivy-action@master
+        with:
+          image-ref: ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+          format: table
+          exit-code: '1'
+          severity: CRITICAL
+
+      # Step 9 — Push to Docker Hub
+      # Only runs if all previous steps passed
+      # Image is now available for Kubernetes to pull
+      - name: Push Docker image
+        run: |
+          docker push ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }}
+          docker push ${{ env.IMAGE_NAME }}:latest
