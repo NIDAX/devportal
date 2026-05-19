@@ -35,17 +35,13 @@ jobs:
       # Step 4 — Build
       # Compiles the .NET code — fails here if there are any errors
       - name: Build
-        run: dotnet build ./src/DevPortal.App/DevPortal.App.csproj \
-          --no-restore \
-          -c Release
+        run: dotnet build ./src/DevPortal.App/DevPortal.App.csproj --no-restore -c Release
 
       # Step 5 — Test
       # Runs all 4 automated tests — pipeline stops if any fail
       # This is the guardrail — nothing deploys with broken code
       - name: Test
-        run: dotnet test ./src/DevPortal.HealthCheck.Tests/DevPortal.HealthCheck.Tests.csproj \
-          --no-restore \
-          -c Release
+        run: dotnet test ./src/DevPortal.HealthCheck.Tests/DevPortal.HealthCheck.Tests.csproj --no-restore -c Release
 
       # Step 6 — Login to Docker Hub
       # Uses secrets stored in GitHub — never hardcoded
