@@ -1,5 +1,5 @@
 # Stage 1 — Build
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0-noble AS build
 
 WORKDIR /src
 
@@ -15,7 +15,7 @@ RUN dotnet publish ./DevPortal.App/DevPortal.App.csproj \
     --no-restore
 
 # Stage 2 — Runtime
-FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+FROM mcr.microsoft.com/dotnet/aspnet:8.0.16-noble-chiseled AS runtime
 
 USER app
 
