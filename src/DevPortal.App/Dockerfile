@@ -1,14 +1,13 @@
 # Stage 1 — Build
-FROM mcr.microsoft.com/dotnet/sdk:8.0.21 AS build
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 
 WORKDIR /src
 
-# Copy the library — matching exact folder structure
-# so the relative path in csproj resolves correctly
 COPY src/DevPortal.HealthCheck/ ./DevPortal.HealthCheck/
 COPY src/DevPortal.App/ ./DevPortal.App/
 
-# Build and publish
+RUN dotnet restore ./DevPortal.App/DevPortal.App.csproj
+
 RUN dotnet publish ./DevPortal.App/DevPortal.App.csproj \
     -c Release \
     -o /app/publish \
