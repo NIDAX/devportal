@@ -15,4 +15,8 @@
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="prometheus-net.AspNetCore" Version="8.2.1" />
+  </ItemGroup>
+
 </Project>

@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute(("\r\n      Standardized health check and readiness endpoints for all platform servic" +
     "es.\r\n    "))]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+96c3506946d028da9f1102c3cc1fb89d42db3776")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5450683307ba770dc8909e5a44a5fac89e2b6de")]
 [assembly: System.Reflection.AssemblyProductAttribute("DevPortal.HealthCheck")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DevPortal.HealthCheck")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

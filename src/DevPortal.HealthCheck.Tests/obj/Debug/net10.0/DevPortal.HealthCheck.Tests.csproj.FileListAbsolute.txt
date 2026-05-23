@@ -133,3 +133,5 @@
 /Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck.Tests/bin/Debug/net10.0/zh-Hant/Microsoft.Testing.Platform.MSBuild.resources.dll
 /Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck.Tests/obj/Debug/net10.0/DevPortal.HealthCheck.Tests.genautoregisteredextensionsinputcache.cache
 /Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck.Tests/obj/Debug/net10.0/AutoRegisteredExtensions.cs
+/Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck.Tests/bin/Debug/net10.0/Prometheus.NetStandard.dll
+/Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck.Tests/bin/Debug/net10.0/Prometheus.AspNetCore.dll

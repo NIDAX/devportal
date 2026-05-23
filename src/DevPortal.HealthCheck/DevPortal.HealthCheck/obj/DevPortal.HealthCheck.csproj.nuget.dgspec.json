@@ -45,6 +45,12 @@
         "net8.0": {
           "framework": "net8.0",
           "targetAlias": "net8.0",
+          "dependencies": {
+            "prometheus-net.AspNetCore": {
+              "target": "Package",
+              "version": "[8.2.1, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

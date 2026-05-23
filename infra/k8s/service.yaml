@@ -1,0 +1,69 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: devteam1
+  namespace: devportal
+  labels:
+    team: devteam1
+spec:
+  selector:
+    app: devteam1
+  ports:
+    - port: 8080
+      targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: devteam2
+  namespace: devportal
+  labels:
+    team: devteam2
+spec:
+  selector:
+    app: devteam2
+  ports:
+    - port: 8080
+      targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: devteam3
+  namespace: devportal
+  labels:
+    team: devteam3
+spec:
+  selector:
+    app: devteam3
+  ports:
+    - port: 8080
+      targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: devteam4
+  namespace: devportal
+  labels:
+    team: devteam4
+spec:
+  selector:
+    app: devteam4
+  ports:
+    - port: 8080
+      targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: devteam5
+  namespace: devportal
+  labels:
+    team: devteam5
+spec:
+  selector:
+    app: devteam5
+  ports:
+    - port: 8080
+      targetPort: 8080

@@ -1,0 +1,254 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devteam1
+  namespace: devportal
+  labels:
+    team: devteam1
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devteam1
+  template:
+    metadata:
+      labels:
+        app: devteam1
+    spec:
+      containers:
+        - name: service
+          image: nidarow/devportal-app:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SERVICE_NAME
+              value: "loan-service"
+            - name: TEAM_NAME
+              value: "devteam1"
+            - name: ENVIRONMENT
+              value: "production"
+            - name: SERVICE_VERSION
+              value: "1.0.0"
+          resources:
+            requests:
+              memory: "32Mi"
+              cpu: "20m"
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 5
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devteam2
+  namespace: devportal
+  labels:
+    team: devteam2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devteam2
+  template:
+    metadata:
+      labels:
+        app: devteam2
+    spec:
+      containers:
+        - name: service
+          image: nidarow/devportal-app:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SERVICE_NAME
+              value: "pension-service"
+            - name: TEAM_NAME
+              value: "devteam2"
+            - name: ENVIRONMENT
+              value: "production"
+            - name: SERVICE_VERSION
+              value: "1.0.0"
+          resources:
+            requests:
+              memory: "32Mi"
+              cpu: "20m"
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 5
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devteam3
+  namespace: devportal
+  labels:
+    team: devteam3
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devteam3
+  template:
+    metadata:
+      labels:
+        app: devteam3
+    spec:
+      containers:
+        - name: service
+          image: nidarow/devportal-app:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SERVICE_NAME
+              value: "payment-service"
+            - name: TEAM_NAME
+              value: "devteam3"
+            - name: ENVIRONMENT
+              value: "production"
+            - name: SERVICE_VERSION
+              value: "1.0.0"
+          resources:
+            requests:
+              memory: "32Mi"
+              cpu: "20m"
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 5
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devteam4
+  namespace: devportal
+  labels:
+    team: devteam4
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devteam4
+  template:
+    metadata:
+      labels:
+        app: devteam4
+    spec:
+      containers:
+        - name: service
+          image: nidarow/devportal-app:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SERVICE_NAME
+              value: "customer-service"
+            - name: TEAM_NAME
+              value: "devteam4"
+            - name: ENVIRONMENT
+              value: "production"
+            - name: SERVICE_VERSION
+              value: "1.0.0"
+          resources:
+            requests:
+              memory: "32Mi"
+              cpu: "20m"
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 5
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: devteam5
+  namespace: devportal
+  labels:
+    team: devteam5
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: devteam5
+  template:
+    metadata:
+      labels:
+        app: devteam5
+    spec:
+      containers:
+        - name: service
+          image: nidarow/devportal-app:latest
+          ports:
+            - containerPort: 8080
+          env:
+            - name: SERVICE_NAME
+              value: "reporting-service"
+            - name: TEAM_NAME
+              value: "devteam5"
+            - name: ENVIRONMENT
+              value: "production"
+            - name: SERVICE_VERSION
+              value: "1.0.0"
+          resources:
+            requests:
+              memory: "32Mi"
+              cpu: "20m"
+            limits:
+              memory: "128Mi"
+              cpu: "100m"
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8080
+            initialDelaySeconds: 10
+            periodSeconds: 10
+          readinessProbe:
+            httpGet:
+              path: /ready
+              port: 8080
+            initialDelaySeconds: 5
+            periodSeconds: 5

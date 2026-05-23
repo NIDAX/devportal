@@ -10,3 +10,4 @@
 /Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck/DevPortal.HealthCheck/obj/Debug/net8.0/refint/DevPortal.HealthCheck.dll
 /Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck/DevPortal.HealthCheck/obj/Debug/net8.0/DevPortal.HealthCheck.pdb
 /Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck/DevPortal.HealthCheck/obj/Debug/net8.0/ref/DevPortal.HealthCheck.dll
+/Users/kafoussias/Git/devportal/src/DevPortal.HealthCheck/DevPortal.HealthCheck/obj/Debug/net8.0/DevPortal.HealthCheck.csproj.AssemblyReference.cache
