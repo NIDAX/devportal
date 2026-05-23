@@ -46,7 +46,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build Docker image
-        run: docker build -f src/DevPortal.App/Dockerfile -t ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} -t ${{ env.IMAGE_NAME }}:latest .
+        run: docker build --platform linux/amd64 -f src/DevPortal.App/Dockerfile -t ${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} -t ${{ env.IMAGE_NAME }}:latest .
 
       - name: Security scan with Trivy
         uses: aquasecurity/trivy-action@master
