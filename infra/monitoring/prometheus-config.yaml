@@ -13,24 +13,24 @@ data:
       - job_name: 'devteam1'
         static_configs:
           - targets: ['devteam1:8080']
-        metrics_path: '/health'
+        metrics_path: '/metrics'
 
       - job_name: 'devteam2'
         static_configs:
           - targets: ['devteam2:8080']
-        metrics_path: '/health'
+        metrics_path: '/metrics'
 
       - job_name: 'devteam3'
         static_configs:
           - targets: ['devteam3:8080']
-        metrics_path: '/health'
+        metrics_path: '/metrics'
 
       - job_name: 'devteam4'
         static_configs:
           - targets: ['devteam4:8080']
-        metrics_path: '/health'
+        metrics_path: '/metrics'
 
       - job_name: 'devteam5'
         static_configs:
           - targets: ['devteam5:8080']
-        metrics_path: '/health'
+        metrics_path: '/metrics'
