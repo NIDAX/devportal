@@ -8,3 +8,6 @@ infra/terraform/.terraform.lock.hcl
 # Mac system files
 .DS_Store
 src/.DS_Store
+infra/terraform/*.tfstate
+infra/terraform/*.tfstate.backup
+infra/terraform/*.backup
